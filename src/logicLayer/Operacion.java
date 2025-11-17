@@ -16,16 +16,29 @@ public class Operacion {
     }
 
 	public TipoOperacion getTipo() {
-        return tipo;
-    }
+		return tipo;
+	}
 
-    public double getMonto() {
-        return monto;
-    }
+	public void setTipo(TipoOperacion tipo) {
+		this.tipo = tipo;
+	}
 
-    public LocalDateTime getFecha() {
-        return fecha;
-    }
-	
+	public double getMonto() {
+		return monto;
+	}
+
+	public void setMonto(double monto) {
+		this.monto = monto;
+	}
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
+	}
+
+
 
 }
