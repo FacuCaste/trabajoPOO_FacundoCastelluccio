@@ -1,62 +1,51 @@
 package logicLayer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 	
-	private String nmobre;
-	private String dni;
-	private String ususario;
-	private String contrasenia;
-	private CuentaCvu cuenta;
-	
-	public Cliente(String nmobre, String dni, String ususario, String contrasenia, CuentaCvu cuenta) {
-		this.nmobre = nmobre;
-		this.dni = dni;
-		this.ususario = ususario;
-		this.contrasenia = contrasenia;
-		this.cuenta = cuenta;
-	}
+	private String nombre;
+    private String dni;
+    private String usuario;
+    private String contrasenia;
+    private String alias;
 
-	public String getNmobre() {
-		return nmobre;
-	}
+    private List<CuentaCvu> cuentas = new ArrayList<>();
 
-	public void setNmobre(String nmobre) {
-		this.nmobre = nmobre;
-	}
+    public Cliente(String nombre, String dni, String usuario, String contrasenia) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
+        this.alias = usuario + ".alias"; 
+    }
 
-	public String getDni() {
-		return dni;
-	}
+    public void agregarCuenta(CuentaCvu cuenta) {
+        cuentas.add(cuenta);
+    }
 
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
 
-	public String getUsusario() {
-		return ususario;
-	}
 
-	public void setUsusario(String ususario) {
-		this.ususario = ususario;
-	}
+    public String getDni() {
+        return dni;
+    }
 
-	public String getContrasenia() {
-		return contrasenia;
-	}
+    public String getUsuario() {
+        return usuario;
+    }
 
-	public void setContrasenia(String contrasenia) {
-		this.contrasenia = contrasenia;
-	}
+    public String getContrasenia() {
+        return contrasenia;
+    }
 
-	public CuentaCvu getCuenta() {
-		return cuenta;
-	}
+    public String getAlias() {
+        return alias;
+    }
 
-	public void setCuenta(CuentaCvu cuenta) {
-		this.cuenta = cuenta;
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
-	
-	
 
 }
